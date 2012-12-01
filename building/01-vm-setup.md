@@ -42,17 +42,17 @@ Before starting the VM, go to `Settings` and do the following customizations.
 1. In `Storage`
     1. Select the `Empty` slot under `Controller: IDE`
     1. Under `Attributes` > `CD / DVD Drive`, click the CD icon
-    (tooltip: `Set up the virtual CD/DVD drive`)
+       (tooltip: `Set up the virtual CD/DVD drive`)
     1. In the drop-down, click `Choose a virtual CD/DVD disk file`
     1. Navigate to the `.iso` image that you downloaded earlier
 1. In `Audio`, uncheck `Enable Audio`
 1. In `Network` > `Adapter 1` > `Advanced`, change `Adapter Type` to
-`Paravirtualized Network (virtio-net)`
+   `Paravirtualized Network (virtio-net)`
 1. In `Network` > `Adapter 2`
     1. Check `Enable Network Adapter`
     1. Change `Attached to` to `Host-only Adapter`
     1. In `Advanced`, change `Adapter Type` to
-    `Paravirtualized Network (virtio-net)`
+       `Paravirtualized Network (virtio-net)`
 1. In `USB`, uncheck `Enable USB Controller`
 
 ### Commentary
@@ -87,27 +87,27 @@ Start the VM and click the  follow the steps below to go through the installatio
 1. Press _Enter_ to choose `United States` as the country.
 1. Press _Enter_ to choose `No` in the `Configure the keyboard` dialog.
 1. Press _Enter_ to choose `English (US)` as the keyboard type. This is largely
-irrelevant, because SSH will be used to access the server.
+   irrelevant, because SSH will be used to access the server.
 1. Press _Enter_ to choose `English (US)` as the keyboard layout.
 1. Press _Enter_ to choose `eth0: Ethernet` as the primary network interface.
 1. Type `webdev` as the hostname and press _Tab_, and then _Enter_ to continue.
 1. Type `six470` as the admin user name and press _Tab_, and then _Enter_ to
-continue.
+   continue.
 1. Type `webdev` as the admin password and press _Enter_ to continue.
 1. Re-type `webdev` to confirm the admin password and press _Enter_ to
-continue.
+   continue.
 1. Press the left arrow, and then _Enter_ to acknowledge the weakness of the
-password.
+   password.
 1. Press _Enter_ to decline having the admin's home directory encrypted.
 1. Press _Enter_ to accept the default time zone.
 1. Press the up arrow to select `Guided - use entire disk` as the partitioning
-method.
+   method.
 1. Press _Enter_ to select the only available hard disk.
 1. Press _Enter_ to accept the default partitioning scheme.
 1. Press _Enter_ to skip setting up an HTTP proxy.
 1. Press _Enter_ to select `No automatic updates`.
 1. Press the space bar to select the `OpenSSH server` then press _Tab_ and
-_Enter_ to continue.
+   _Enter_ to continue.
 1. Press _Enter_ to accept installing GRUB to the MBR.
 1. Press _Enter_ to reboot.
 
@@ -123,14 +123,13 @@ Follow the steps below to set up mDNS so you can SSH into your machine.
 1. Re-type the password `webdev` to appease _sudo_.
 1. Run the command `sudo apt-get install -y avahi-daemon`
 1. Run the command `sudo vim /etc/network/interfaces` (if you don't use vim,
-replace `vim` with `nano`)
+   replace `vim` with `nano`)
 1. Add the following lines at the end of the file and save it.
-```
 
-# The host-only network interface
-auto eth1
-iface eth1 inet dhcp
-```
+        # The host-only network interface
+        auto eth1
+        iface eth1 inet dhcp
+
 1. Run the command `sudo reboot`
 
 If everything went well, you will never have to log into the VM console again.
