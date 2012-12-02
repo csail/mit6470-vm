@@ -32,6 +32,18 @@ Set up VirtualBox, so you can run the development VM.
 1. Open the downloaded `.dmg` file and double-click on the package icon to
    install VirtualBox.
 1. Run VirtualBox from the `/Applications` directory.
+1. From the VirtualBox menu, select `File` > `Preferences...`.
+1. Select the `Network` tab.
+1. Click the button with a green plus sign on the right side of the window.
+   (tooltip: `Add host-only network`)
+1. Click the screwdriver button. (tooltip: `Edit host-only network`)
+1. Select the `DHCP server` tab.
+1. Check the `Enable Server` checkbox.
+1. Enter `192.168.56.2` in the `Server Address` field.
+1. Enter `255.255.255.0` in the `Server Mask` field.
+1. Enter `192.168.56.100` in the `Lower Address Bound` field.
+1. Enter `192.168.56.128` in the `Upper Address Bound` field.
+1. Click the `OK` buttons to dismiss the dialog boxes.
 1. From the VirtualBox menu, select `Machine` > `Add...`.
 1. Go to the `mit6470-vm` folder in the `Documents` folder, and select the
    `mit6470.vbox` file.
