@@ -183,6 +183,14 @@ descriptor.
 
 ### Commentary
 
+The extensive customizations to `avahi-daemon.conf` are annoying, but are
+necessary to get mDNS working. The mDNS server is disabled on `eth0` because
+VirtualBox has a bug that causes mDNS traffic to spill outside the NAT, which
+causes the OSX mDNS client to blacklist the `webdev.local` address until a
+reboot happens. IPv6 is disabled because VirtualBox doesn't handle IPv6 over
+host-only networks very well, and falling back to IPv4 causes noticeable lag
+when connecting to the VM via SSH or HTTP.
+
 A good method for debugging mDNS issues is to install
 [WireShark](http://www.wireshark.org/) and have it listen to the `vboxnet0`
 host-only network interface, and then use `avahi-resolve -n webdev.local` to
