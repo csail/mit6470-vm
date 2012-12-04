@@ -6,7 +6,7 @@ and [Ruby on Rails](http://rubyonrails.org/), as well as commonly used Ruby
 gems, such as the [Sass](http://sass-lang.com/) compiler.
 
 
-## Ruby, Web frameworks, and Sass
+## Ruby Runtime
 
 1. Install the Ruby and [Rubygems](http://rubygems.org/) packages.
 
@@ -14,17 +14,24 @@ gems, such as the [Sass](http://sass-lang.com/) compiler.
 sudo apt-get install -y ruby ruby-dev
 ```
 
-1. Install the Ruby on Rails and Sinatra gems, for Web development.
+### Commentary
+
+Many Ruby users use [rbenv](https://github.com/sstephenson/rbenv) or
+[rvm](https://rvm.io/). Ubuntu 12.10 bundles a reasonably recent MRI 1.9.3
+build, so we decided to stick with it, over concerns that the indirection layer
+added by `rbenv` and `rvm` will make debugging harder for beginners.
+
+More and more forums recommend using RVM. We might end up including it, just so
+that students won't think it solves whatever application problem they're having
+and waste installing it on their own.
+
+
+## Ruby Libraries
+
+1. Install commonly used Ruby gems.
 
 ```bash
-sudo gem install rails sinatra
-```
-
-1. Install the Sass compiler and the [Compass](http://compass-style.org/)
-   low-level CSS framework.
-
-```bash
-sudo gem install compass sass
+sudo gem install rails sinatra foreman compass sass
 ```
 
 ### Commentary
@@ -32,6 +39,10 @@ sudo gem install compass sass
 Installing Rails automatically installs [bundler](http://gembundler.com/),
 which is very useful for deploying Ruby code. If you skip on Rails for your
 server setup, definitely install the `bundler` gem.
+
+[Compass](http://compass-style.org/) is a low-level CSS framework and can be
+used in a SCSS lecture. The [foreman](http://ddollar.github.com/foreman/) gem
+is used for production deployments in the Ruby lessons.
 
 
 ## Mechanize

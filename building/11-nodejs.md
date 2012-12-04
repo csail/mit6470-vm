@@ -5,7 +5,7 @@ used node packages, such as the [CoffeeScript](http://coffeescript.org/) and
 [less](http://lesscss.org/) compilers.
 
 
-## Node.js
+## Node.js Runtime
 
 1. Add a PPA with up-to-date packages.
 
@@ -26,12 +26,12 @@ We're not particularly happy to use a PPA instead of official Ubuntu packages.
 Unfortunately, Ubuntu 12.10 packages `node.js` 0.6, which is rather old.
 
 
-## CoffeeScript
+## Node.js Libraries
 
-1. Install the CoffeeScript compiler.
+1. Install the CoffeeScript and Less compilers.
 
 ```bash
-sudo npm install -g coffee-script
+sudo npm install -g coffee-script less watch-less
 ```
 
 ### Commentary
@@ -39,17 +39,6 @@ sudo npm install -g coffee-script
 It is unfortunate that users need to learn to update packages from multiple
 tools (`apt`, `npm`, `gem`, etc.) We might add a script that performs updates
 across all package managers.
-
-
-## Less
-
-1. Install the less compiler and a tool that auto-compiles changed files.
-
-```bash
-sudo npm install -g less watch-less
-```
-
-### Commentary
 
 `watch-less` is included so it can be used during teaching. Beginners are
 particularly prone to wasting a lot of time due to out of date CSS files.
