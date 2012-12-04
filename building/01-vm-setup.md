@@ -18,11 +18,12 @@ from the [advanced download page](http://releases.ubuntu.com/quantal/).
 
 ## VirtualBox Setup
 
-You need [VirtualBox](https://www.virtualbox.org/) and clients for SSH and mDNS
-to set up the VM. Follow the instructions in `using/` to get this software.
+You need [VirtualBox](https://www.virtualbox.org/), clients for SSH and mDNS,
+and a 7-zip port to set up the VM. Follow the instructions in `using/` to get
+this software.
 
-Once you have VirtualBox, start it and create a new VM image with the following
-properties.
+Start VirtualBox and go to `Machine` > `New` in the menu to create a new VM
+image. Use the property values below to answer the wizard questions.
 
 1. Name: `MIT 6.470`
 1. Type: `Linux`

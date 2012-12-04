@@ -17,13 +17,15 @@ Set up stable and development versions of Firefox and Google Chrome.
 1. Download and install the `Stable channel for Mac` build.
 1. Download and install the `Canary build for Mac`.
 
-Download the development VM image.
+Get the development VM image.
 
+1. Go to the [Keka download page](http://www.kekaosx.com/).
+1. Download and install Keka to be able to work with `.7z` files.
 1. Open Finder and go to the `Documents` folder from the left sidebar.
 1. Create a folder named `mit6470-vm`.
-1. Download the development VM .zip file from the
+1. Download the development VM `mit640-vm.7z` file from the
 [MIT 6.470 downloads section](http://6.470.scripts.mit.edu/TBD).
-1. Unpack the .zip file in the `mit6470-vm` folder that you have just created.
+1. Unpack the `.7z` file in the `mit6470-vm` folder that you have just created.
 
 Set up VirtualBox, so you can run the development VM.
 

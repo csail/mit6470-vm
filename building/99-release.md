@@ -76,11 +76,28 @@ mode. However, the required commands are long, and typing them is error-prone,
 so it's preferable to have the commands issued in a SSH prompt, where they can
 be copy-pasted from the documentation.
 
+The bash history is cleaned up so that users wouldn't stumble upon the setup
+commands (and possibly failed experiments) while doing their work. It's not
+really a space-saving measure, but it is described here because it must be done
+right before booting the VM in single mode.
+
+`halt` is used because the VM doesn't seem to react to `Machine` >
+`ACPI Shutdown` when booted in single mode.
+
 
 ## Packaging
 
-Follow the steps below to produce the `.zip` file.
+Follow the steps below to produce the `mit6470-vm.7z` file.
 
 1. In the VirtualBox main window, right-click on the `MIT 6.470` VM entry, and
 select `Show in File Manager`.
-1. Compress `MIT 6.470.vbox` and `mit6470.vdi` into `mit6470-vm.zip`.
+1. Copy `MIT 6.470.vbox` into `mit6470.vbox`.
+1. Compress `MIT 6.470.vbox` and `mit6470.vdi` into `mit6470-vm.7z`.
+
+### Commentary
+
+Using `.zip` instead of `.7z` would make the user setup a bit easier, because
+all our target platforms have built-in Zip decompression. However, 7-Zip
+produces significantly smaller files, which translate into less server badwidth
+and better download times. On an early version of the VM, zip compression
+yielded a 517MB file, while the 7-zip file was only 360MB.
