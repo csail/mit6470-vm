@@ -81,6 +81,8 @@ Set up VirtualBox, so you can run the development VM.
 1. Right-click on the `MIT 6.470` entry that just showed up and select
    `Create Shortcut on Desktop`
 1. Double-click the desktop shortcut to start the VM.
+1. Verify that you can open [http://webdev.local](http://webdev.local) in a Web
+   browser.
 
 Set up [Apple Bonjour](http://www.apple.com/support/bonjour/) so you can
 use the `webdev.local` name to connect to your VM, instead of having to
@@ -120,6 +122,12 @@ six470@webdev:~$
 
 1. Type `exit` and pres _Enter_. The terminal window should close.
 
+Shut down your development VM.
+
+1. Go to your VM's VirtualBox window.
+1. Press the `X` button at the top-right of the window to close it.
+1. Check the `Send the shutdown signal` radio button.
+1. Press `OK`.
 
 ## Run Stuff
 

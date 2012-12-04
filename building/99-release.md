@@ -55,6 +55,8 @@ rm ~/.bash_history
 mount -n -o remount,rw /
 rm -rf /tmp/*
 rm -rf /var/log/*
+mkdir /var/log/nginx
+chown www-data:www-data /var/log/nginx
 mount -n -o remount,ro /
 zerofree /dev/sda1
 halt

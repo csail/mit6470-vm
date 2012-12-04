@@ -87,6 +87,8 @@ Set up SSHFS, so you can use the VM's files from OSX.
 Follow these steps every time you restart your computer.
 
 1. Double-click the `MIT 6.470` desktop shortcut to launch the VM.
+1. Verify that you can open [http://webdev.local](http://webdev.local) in a Web
+   browser.
 1. Click the `Terminal` icon in the dock.
 1. Run the following command in `Terminal` to access the VM's files.
 

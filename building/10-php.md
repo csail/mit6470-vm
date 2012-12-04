@@ -133,6 +133,7 @@ server {
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/php /etc/nginx/sites-enabled/php
+sudo update-rc.d php-fastcgi defaults
 ```
 
 ### Commentary
