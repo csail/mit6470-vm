@@ -81,8 +81,6 @@ Set up VirtualBox, so you can run the development VM.
 1. Right-click on the `MIT 6.470` entry that just showed up and select
    `Create Shortcut on Desktop`
 1. Double-click the desktop shortcut to start the VM.
-1. Verify that you can open [http://webdev.local](http://webdev.local) in a Web
-   browser.
 
 Set up [Apple Bonjour](http://www.apple.com/support/bonjour/) so you can
 use the `webdev.local` name to connect to your VM, instead of having to
@@ -114,7 +112,8 @@ Set up PuTTY, so you can connect to the development VM's terminal.
 1. Click `Yes` in the `PuTTY Security Alert` warning dialog box.
 1. Type `six470` at the `login as:` prompt, and then press _Enter_.
 1. Type `webdev` at the password prompty, and then press _Enter_.
-1. If everything worked, you should see a bunch of text ending with
+1. If everything worked, you should see a bunch of text ending with a prompt
+   that resembles the following.
 
 ```
 six470@webdev:~$
@@ -134,6 +133,8 @@ Shut down your development VM.
 Follow these steps every time you restart your computer.
 
 1. Double-click the `MIT 6.470` desktop shortcut to launch the VM.
+1. Verify that you can open [http://webdev.local](http://webdev.local) in a Web
+   browser.
 
 Connect to the VM's file share, so you can use the VM's files from Windows.
 
