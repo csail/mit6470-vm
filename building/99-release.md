@@ -12,6 +12,9 @@ a Linux-based VM image.
 The steps in this section cut down the size of the VirtualBox disk image file
 as much as possible.
 
+
+### SSH Commands
+
 1. Install `zerofree` and clean up the package manager's cache and old
    packages.
 
@@ -38,8 +41,10 @@ sudo mkswap --uuid $SUID /dev/sda5
 rm ~/.bash_history
 ```
 
-1. Select the VirtualBox window for the VM. The following steps cannot be done
-   from an SSH client.
+### VM Console Commands
+
+Select the VirtualBox window for the VM to perform the following steps.
+
 1. From the Window menu, select `Machine` > `Insert Ctrl+Alt+Del` to reboot the
    VM.
 1. When the VM reboots, and the GRUB menu shows up, press the down arrow
@@ -62,6 +67,7 @@ zerofree /dev/sda1
 halt
 ```
 
+1. Move the VM window to the top-left of the screen.
 1. After `System halted` is printed, select `Machine` > `Close` from the
    VirtualBox menu, select the `Power off the machine` radio button and press
    the `OK` button.
@@ -94,7 +100,19 @@ Follow the steps below to produce the `mit6470-vm.7z` file.
 1. In the VirtualBox main window, right-click on the `MIT 6.470` VM entry, and
 select `Show in File Manager`.
 1. Copy `MIT 6.470.vbox` into `mit6470.vbox`.
-1. Compress `MIT 6.470.vbox` and `mit6470.vdi` into `mit6470-vm.7z`.
+1. Open `mit6470.vbox` with your favorite text editor.
+1. Find the line that resembles the following.
+
+```xml
+<ExtraDataItem name="GUI/LastCloseAction" value="powerOff"/>
+```
+
+1. Set the value attribute to `shutdown`.
+1. Copy `mit6470.vbox` into `mit6470-windows.vbox`.
+1. Open `mit6470-windows.vbox` in your favorite text editor.
+1. Replace-All `vboxnet0` with `VirtualBox Host-Only Ethernet Adapter`.
+1. Compress `mit6470.vbox`, `mit6470-windows.vbox` and `mit6470.vdi` into
+   `mit6470-vm.7z`.
 
 ### Commentary
 
@@ -103,3 +121,5 @@ all our target platforms have built-in Zip decompression. However, 7-Zip
 produces significantly smaller files, which translate into less server badwidth
 and better download times. On an early version of the VM, zip compression
 yielded a 517MB file, while the 7-zip file was only 360MB.
+
+
